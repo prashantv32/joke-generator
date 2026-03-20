@@ -1,0 +1,40 @@
+<!-- dynamic content on ui -->
+ <!-- main page : button + joke display -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css">
+    <title>Joke Generator</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Up for a Joke? 😄</h1>
+        <p class="disclaimer">
+            ⚠️ For fun purposes only. Don't take any joke personally!
+        </p>
+
+        <!-- form always visible - form sends GET to /joke -->
+         <form action="/joke" method="GET">
+            <button type="submit">Generate a Joke</button>
+
+         </form>
+
+         <!-- joke section only renders when joke exists -->
+          <% if(joke){ %>
+          <div class="joke-box">
+            <% if(joke.type === "twopart"){ %>
+                <p class="setup"><strong>Setup : </strong><%= joke.setup %></p>
+                <p class="delivery"><strong>Punchline :</strong><%= joke.delivery %></p>
+
+            <% }else{ %>
+                <p class="single"><%= joke.joke %></p>
+                <% } %>
+            <%} %>
+          </div>
+    </div>
+    
+</body>
+</html>
+

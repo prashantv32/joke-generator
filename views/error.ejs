@@ -1,0 +1,26 @@
+<!-- this page shown when something is wrong -->
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css">
+    <title>Error</title>
+ </head>
+ <body>
+    <div class="container">
+        <h1>Something went wrong</h1>
+        <p class="error-message"><%= error %></p>
+        <p class="disclaimer">
+            JokeAPI allows 120 requests/minute.
+            If you're seeing this repeatedly, you may have hit the limit.
+            Please wait a minute and try again.
+        </p>
+        <a href="/" > ← Go back </a>
+    </div>
+
+
+
+    
+ </body>
+ </html>
