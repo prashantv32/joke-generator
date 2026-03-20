@@ -7,17 +7,24 @@ Jokes can be single-liners or two-part setup/punchline style.
 ## How to run
 
 1. Clone the repository
+```
    git clone https://github.com/prashantv32/joke-generator.git
-
+```
 
 2. Install dependencies
+```
    npm install
+```
 
 3. Start the server
+```
    nodemon index.js
+```
 
 4. Open your browser at
+```
    http://localhost:3000
+```
 
 ## Technologies used
 
